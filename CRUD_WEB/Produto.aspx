@@ -12,49 +12,42 @@
         <div style="font-family: Arial, Helvetica, sans-serif; background-color: #3366FF; border: thin double #000000">
             <asp:Label ID="Label1" runat="server" Font-Names="Arial Black" ForeColor="Black" Text="Cadastro de Estoques"></asp:Label>
             <br />
-            <asp:Button ID="buttonNovo" runat="server" Text="Novo" />
+            <asp:Button ID="buttonNovo" runat="server" Text="Novo" Width="90px" OnClick="buttonNovo_Click1" />
 &nbsp;
-            <asp:Button ID="buttonCadastrar" runat="server" Text="Cadastrar" />
+            <asp:Button ID="buttonCadastrar" runat="server" Text="Cadastrar" Width="90px" OnClick="buttonCadastrar_Click" />
 &nbsp;
-            <asp:Button ID="buttonDeletar" runat="server" Text="Deletar" />
+            <asp:Button ID="buttonDeletar" runat="server" Text="Deletar" Width="90px" OnClick="buttonDeletar_Click" />
 &nbsp;
-            <asp:Button ID="buttonPesquisar" runat="server" Text="Pesquisar" />
+            <asp:Button ID="buttonPesquisar" runat="server" Text="Pesquisar" Width="90px" OnClick="buttonPesquisar_Click" />
             <br />
-            <asp:Label ID="Label2" runat="server" Text="ID:"></asp:Label>
-            <asp:TextBox ID="textID" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+            <asp:Label ID="Label2" runat="server" Text="ID:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textID" runat="server" Width="300px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label3" runat="server" Text="Nome: "></asp:Label>
-            <asp:TextBox ID="textNome" runat="server" Width="327px"></asp:TextBox>
+            <asp:Label ID="Label3" runat="server" Text="Nome: " Width="150px"></asp:Label>
+            <asp:TextBox ID="textNome" runat="server" Width="300px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label4" runat="server" Text="Descrição:"></asp:Label>
-            <asp:TextBox ID="textDescricao" runat="server" Height="158px" TextMode="MultiLine" Width="301px"></asp:TextBox>
+            <asp:Label ID="Label4" runat="server" Text="Descrição:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textDescricao" runat="server" Height="158px" TextMode="MultiLine" Width="300px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label5" runat="server" Text="Valor de Custo:"></asp:Label>
-            <asp:TextBox ID="textPreco_Custo" runat="server"></asp:TextBox>
+            <asp:Label ID="Label5" runat="server" Text="Valor de Custo:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textPreco_Custo" runat="server" Width="140px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label6" runat="server" Text="Valor de Venda:"></asp:Label>
-            <asp:TextBox ID="textPreco_Venda" runat="server"></asp:TextBox>
+            <asp:Label ID="Label6" runat="server" Text="Valor de Venda:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textPreco_Venda" runat="server" Width="140px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label7" runat="server" Text="Quantidade:"></asp:Label>
-            <asp:TextBox ID="textQuantidade" runat="server"></asp:TextBox>
+            <asp:Label ID="Label7" runat="server" Text="Quantidade:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textQuantidade" runat="server" Width="140px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label8" runat="server" Text="Unidade Medida:"></asp:Label>
-            <asp:TextBox ID="textUnidadeMedida" runat="server"></asp:TextBox>
+            <asp:Label ID="Label8" runat="server" Text="Unidade Medida:" Width="150px"></asp:Label>
+            <asp:TextBox ID="textUnidadeMedida" runat="server" Width="140px"></asp:TextBox>
             <br />
-            <asp:Label ID="Label9" runat="server" Text="Categoria:"></asp:Label>
-            <asp:DropDownList ID="dropDownListCategoria" runat="server">
+            <asp:Label ID="Label9" runat="server" Text="Categoria:" Width="150px"></asp:Label>
+            <asp:DropDownList ID="dropDownListCategoria" runat="server" Width="140px" ValidateRequestMode="Disabled">
             </asp:DropDownList>
             <br />
-            <asp:GridView ID="gridViewProdutos" runat="server" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="4" ForeColor="Black" GridLines="Horizontal" Width="705px">
-                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
-                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
-                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
-                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
-                <SortedAscendingCellStyle BackColor="#F7F7F7" />
-                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
-                <SortedDescendingCellStyle BackColor="#E5E5E5" />
-                <SortedDescendingHeaderStyle BackColor="#242121" />
+            <asp:GridView ID="gridViewProdutos" runat="server" Height="114px" Width="522px">
             </asp:GridView>
+            <br />
         </div>
     </form>
 </body>

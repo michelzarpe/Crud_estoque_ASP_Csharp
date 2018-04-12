@@ -24,18 +24,30 @@ public class DataAccessLayer
         mySqlConnection.Open();
     }
 
+    public DataTable retDataTable(MySqlCommand mysqlCommand)
+    {
+        DataTable data = new DataTable();
+        mysqlCommand.Connection = mySqlConnection;
+        MySqlDataAdapter dat = new MySqlDataAdapter(mysqlCommand);
+        dat.Fill(data);
+        return data; 
+    }
+
+
+    /*funciona passando sql para retronar*/
     public DataTable retDataTable(string sql)
     {
         DataTable data = new DataTable();
         MySqlCommand mysqlCommand = new MySqlCommand(sql, mySqlConnection);
         MySqlDataAdapter dat = new MySqlDataAdapter(mysqlCommand);
         dat.Fill(data);
-        return data; 
+        return data;
     }
 
-    public void executarComandoSql(string sql)
+
+    public void executarComando(MySqlCommand mysqlCommand)
     {
-        MySqlCommand mysqlCommand = new MySqlCommand(sql, mySqlConnection);
+        mysqlCommand.Connection = mySqlConnection;
         mysqlCommand.ExecuteNonQuery();
     }
 }
